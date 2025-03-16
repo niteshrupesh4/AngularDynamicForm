@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+.container {
+    padding: 2.5em; /* Add padding to all sides of the container */
+  }
+  

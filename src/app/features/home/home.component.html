@@ -1,0 +1,11 @@
+<!-- src/app/home/home.component.html -->
+<div class="container">
+  <h1 class="home-title">Welcome to the Home Page</h1>
+
+  <div class="card-container">
+    <div *ngFor="let tile of tiles" [routerLink]="[tile.navurl]" class="card">
+      <h3 class="card-title">{{ tile.title }}</h3>
+      <p class="card-description">{{ tile.description }}</p>
+    </div>
+  </div>
+</div>

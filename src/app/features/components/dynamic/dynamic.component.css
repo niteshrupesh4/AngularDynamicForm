@@ -1,0 +1,58 @@
+/* src/styles.css or component-specific CSS */
+
+/* Ensure the form is centered with a max width */
+.pt-5 {
+    padding-top: 3rem; /* Add top padding */
+  }
+  
+  form {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* Make the form more flexible on smaller screens */
+  @media (max-width: 576px) {
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Ensure the buttons have proper spacing */
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Small screen adjustment */
+  @media (max-width: 767px) {
+    .row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .col-12.col-md-6 {
+      margin-bottom: 1rem;
+    }
+  
+    .col-12.col-md-3 {
+      margin-bottom: 1rem;
+    }
+  
+    .col-12.col-md-3.d-flex {
+      justify-content: flex-start;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 992px) {
+    .col-md-6 {
+      margin-bottom: 1rem;
+    }
+  
+    .col-md-3 {
+      margin-bottom: 1rem;
+    }
+  }
+  

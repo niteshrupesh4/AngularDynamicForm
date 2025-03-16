@@ -1,0 +1,16 @@
+<!-- navigation.component.html -->
+<nav class="navbar">
+    <div class="logo">
+      <a [routerLink]="['/']">MyApp</a>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    <ul class="nav-links">
+      <li><a [routerLink]="['/']">Home</a></li>
+    </ul>
+    
+  </nav>
+  

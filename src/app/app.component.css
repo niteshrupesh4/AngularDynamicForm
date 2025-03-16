@@ -1,0 +1,21 @@
+/* src/app/app.component.css */
+
+/* Default padding for the container */
+.container {
+    padding: 20px;
+  }
+  
+  /* For medium screens (tablets) and larger, increase padding */
+  @media (min-width: 768px) {
+    .container {
+      padding: 40px;
+    }
+  }
+  
+  /* For small screens (mobiles), reduce padding */
+  @media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  

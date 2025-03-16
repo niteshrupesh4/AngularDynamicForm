@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, OnChanges, Input, SimpleChanges, DoCheck } from '@angular/core';
+import { Component, OnDestroy, OnInit, OnChanges, Input, SimpleChanges, DoCheck, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -11,6 +11,7 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck {
   }
   interval: any;
   @Input() textvalue: string = '';
+  @Output() messageEvent = new EventEmitter<string>();  // @Output to emit data to parent
   
 
   ngOnInit(): void {
@@ -56,5 +57,8 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck {
   ngOnDestroy(): void {
     clearInterval(this.interval);
     console.log("Child ngOnDestroy")
+  }
+  sendMessage() {
+    this.messageEvent.emit("Hello from Child!" + Math.floor(Math.random() * 100));  
   }
 }

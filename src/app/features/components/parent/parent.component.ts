@@ -19,4 +19,9 @@ export class ParentComponent implements OnInit{
   ngOnInit(): void {
     console.log("Parent ngOnInit")
   }
+  receivedMessage = "";
+
+  receiveMessage($event: string) {
+    this.receivedMessage = $event;
+  }
 }

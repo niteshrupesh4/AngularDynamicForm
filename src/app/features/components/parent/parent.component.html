@@ -1,7 +1,10 @@
 <div class="container">
-    <p>parent works!</p>
+    <h2>Parent Component</h2>
+    <p>Message from child: {{ receivedMessage }}</p>
     <button (click)="OnClick()">Click Toggle</button>
 
     <input type="text" [(ngModel)]="textvalue">
-    <app-child *ngIf="isChild" [textvalue]="textvalue">Parent content</app-child>
+    
+    <app-child *ngIf="isChild" [textvalue]="textvalue" (messageEvent)="receiveMessage($event)">Parent content</app-child>
+    
 </div>
